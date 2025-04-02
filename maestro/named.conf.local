@@ -1,0 +1,11 @@
+key "clave" { 
+	algorithm hmac-sha256; 
+	secret "cu59rLmx+THhyGAkVugpQ36x3tThnlGl6ImTBURjFcs="; 
+}; 
+
+zone "cortesmurillo.com" {
+	type master; 
+	file "/etc/bind/db.cortesmurillo.com"; 
+	allow-transfer { key clave; }; 
+};
+
